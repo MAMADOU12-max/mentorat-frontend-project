@@ -1,20 +1,18 @@
 <template>
-  <LoginPage/>
+  <!-- <LoginScreen/> -->
+  <HomeScreen/>
 </template>
 
 <script>
-import LoginPage from './components/LoginPage.vue'
+// import LoginScreen from './views/LoginScreen.vue'
+import HomeScreen from './views/HomeScreen.vue'
+
 
 export default {
   name: 'App',
   components: {
-    LoginPage,
+    // LoginScreen, 
+    HomeScreen
   }
 }
 </script>
-
-<style>
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-}
-</style>
