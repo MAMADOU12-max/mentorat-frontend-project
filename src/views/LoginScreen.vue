@@ -1,74 +1,75 @@
 <template>
-  <div class="container">
-      <div class="left">
-          <div class="left-container">
-              <img v-bind:src="require('@/assets/community_manager.png')" alt="logo mentor-hub">
-          </div>
-      </div>
-      <div class="right">
-          <div class="logo">
-              <img v-bind:src="require('@/assets/mentor-hub.png')" alt="logo mentor-hub">
-          </div>
-          <div class="form">
-              <div class="container-form">
-                  <h1>Se connecter</h1>
-                  <form>
-                      <div class="container-input">
-                          <div class="icon-input">
-                              <img v-bind:src="require('@/assets/important_mail_100px.png')" alt="logo mentor-hub">
-                          </div>
-                          <div class="div-input">
-                              <h5>Emails</h5>
-                              <input type="email" class="input" required>
-                          </div>
-                      </div>
-                      <div class="container-input">
-                          <div class="icon-input">
-                              <img v-bind:src="require('@/assets/show_password_48px.png')" alt="logo mentor-hub">
-                          </div>
-                          <div class="div-input">
-                              <h5>Password</h5>
-                              <input type="password" class="input" required>
-                          </div>
-                      </div>
-                      <input type="submit" value="Connectez-Vous">
-                  </form>
-                  <p>pas de compte ? <a href="#" style="color: #a146a6">crée un compte</a> </p>
-              </div>
+    <div class="container">
+        <div class="left">
+            <div class="left-container">
+                <img v-bind:src="require('@/assets/community_manager.png')" alt="logo mentor-hub">
+            </div>
+        </div>
+        <div class="right">
+            <div class="logo">
+                <img v-bind:src="require('@/assets/mentor-hub.png')" alt="logo mentor-hub">
+            </div>
+            <div class="form">
+                <div class="container-form">
+                    <h1>Se connecter</h1>
+                    <form>
+                        <div class="container-input">
+                            <div class="icon-input">
+                                <img v-bind:src="require('@/assets/important_mail_100px.png')" alt="logo mentor-hub">
+                            </div>
+                            <div class="div-input">
+                                <h5>Emails</h5>
+                                <input type="email" class="input" required>
+                            </div>
+                        </div>
+                        <div class="container-input">
+                            <div class="icon-input">
+                                <img v-bind:src="require('@/assets/show_password_48px.png')" alt="logo mentor-hub">
+                            </div>
+                            <div class="div-input">
+                                <h5>Password</h5>
+                                <input type="password" class="input" required>
+                            </div>
+                        </div>
+                        <input type="submit" value="Connectez-Vous">
+                    </form>
+                    <p>pas de compte ? <a href="#" style="color: #a146a6">crée un compte</a> </p>
+                </div>
 
-          </div>
-          <div class="contact">
-              <p style="margin-right: 1%">Retrouver nous sur</p>
-              <img v-for="image in images2" :key="image.id" v-bind:src="require(`../assets/icon/${image.name}`)" v-bind:alt="image.alt" />
-          </div>
-      </div>
-  </div>
+            </div>
+            <div class="contact">
+                <p style="margin-right: 1%">Retrouver nous sur</p>
+                <img v-for="image in images2" :key="image.id" v-bind:src="require(`../assets/icon/${image.name}`)"
+                    v-bind:alt="image.alt" />
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
 export default {
     name: "LoginPage",
-    data(){
+    data() {
         return {
             images: ["facebook_48px.png", "pinterest_60px.png", "whatsapp_60px.png"],
-            images2 : [
+            images2: [
                 { name: "pinterest_60px.png", alt: "pinterest icon" },
-                { name: "facebook_48px.png", alt:"facebook icon" },
+                { name: "facebook_48px.png", alt: "facebook icon" },
                 { name: "whatsapp_60px.png", alt: "whatsapp icon" },
             ]
         }
     },
-    mounted(){
+    mounted() {
         const inputs = document.querySelectorAll(".input");
 
-        function addclass(){
+        function addclass() {
             let parent = this.parentNode.parentNode;
             parent.classList.add("focus");
         }
 
-        function remclass(){
+        function remclass() {
             let parent = this.parentNode.parentNode;
-            if(this.value == ""){
+            if (this.value == "") {
                 parent.classList.remove("focus");
             }
         }
@@ -85,8 +86,7 @@ export default {
 
 
 <style scoped>
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -96,7 +96,7 @@ a {
     text-decoration: none;
 }
 
-.icon-input{
+.icon-input {
     position: relative;
     display: flex;
     justify-content: center;
@@ -104,24 +104,24 @@ a {
     height: 100%;
 }
 
-.icon-input img{
+.icon-input img {
     width: 65%;
     height: 65%;
 }
 
-.container{
+.container {
     display: flex;
     width: 100%;
     height: 100vh;
 }
 
-.left{
+.left {
     width: 50%;
     height: 100%;
-    filter: drop-shadow(5px 0px 3px rgba(0,0,0,0.2));
+    filter: drop-shadow(5px 0px 3px rgba(0, 0, 0, 0.2));
 }
 
-.left-container{
+.left-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,37 +131,37 @@ a {
     clip-path: polygon(0% 100%, 0 0, 100% 0, 93% 100%);
 }
 
-.left-container img{
+.left-container img {
     width: 100%;
     height: 80%;
 }
 
-.right{
+.right {
     width: 50%;
     height: 100%;
 }
 
-.logo{
+.logo {
     display: flex;
     justify-content: right;
     align-items: center;
     height: 10%;
 }
 
-.logo img{
+.logo img {
     width: fit-content;
     height: 80%;
     margin-right: 3%;
 }
 
-.form{
+.form {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 80%;
 }
 
-.form .container-form{
+.form .container-form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -169,7 +169,7 @@ a {
     height: 80%;
 }
 
-.form form{
+.form form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -178,7 +178,7 @@ a {
     width: 100%;
 }
 
-.form form .container-input{
+.form form .container-input {
     position: relative;
     height: 15%;
     width: 50%;
@@ -189,11 +189,11 @@ a {
     border-bottom: 2px solid;
 }
 
-.container-input > div {
+.container-input>div {
     position: relative;
 }
 
-.container-input > div > h5 {
+.container-input>div>h5 {
     position: absolute;
     left: 10px;
     top: 65%;
@@ -203,7 +203,8 @@ a {
     transition: .3s;
 }
 
-.container-input:before, .container-input:after{
+.container-input:before,
+.container-input:after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -214,7 +215,7 @@ a {
     transition: .4s;
 }
 
-.container-input > div > input{
+.container-input>div>input {
     position: absolute;
     left: 0;
     top: 0;
@@ -229,39 +230,41 @@ a {
     font-family: 'poppins', sans-serif;
 }
 
-.container-input:before{
+.container-input:before {
     right: 50%;
 }
 
-.container-input:after{
+.container-input:after {
     left: 50%;
 }
 
-.container-input.focus:before, .container-input.focus:after{
+.container-input.focus:before,
+.container-input.focus:after {
     width: 50%;
 }
 
-.container-input.focus > div > h5{
+.container-input.focus>div>h5 {
     top: -5px;
     font-size: 15px;
     color: #a146a6
 }
 
-.container-input.focus > .icon-input > img{
+.container-input.focus>.icon-input>img {
     color: #38d39f;
 }
 
-.div-input{
+.div-input {
     position: relative;
 }
 
-input{
+input {
     outline: none;
-    box-shadow : none;
+    box-shadow: none;
     border: none;
 }
 
-input[type="email"] ,input[type="password"] {
+input[type="email"],
+input[type="password"] {
     outline: none;
     height: 100%;
     width: 100%;
@@ -280,26 +283,25 @@ input[type="email"] ,input[type="password"] {
 }
 
 
-.contact{
+.contact {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     height: 10%;
 }
 
-.contact img{
+.contact img {
     width: fit-content;
     height: 45%;
 }
 
-@media screen and (max-width: 900px){
-    .left{
+@media screen and (max-width: 900px) {
+    .left {
         display: none;
     }
 
-    .right{
+    .right {
         width: 100%;
     }
 }
-
 </style>
