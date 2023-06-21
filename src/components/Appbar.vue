@@ -1,6 +1,6 @@
 <template>
     <div>
-       <h1>This is the place of the common navbar</h1>
+       <h1 class="bg-danger">This is the place of the common navbar meet du 21</h1>
     </div>
 </template>
 
