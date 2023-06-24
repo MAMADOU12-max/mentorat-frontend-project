@@ -1,10 +1,12 @@
 <template>
 <!--   <LoginScreen/>-->
-  <home-screen></home-screen>
+<!--  <home-screen></home-screen>-->
+    <router-view></router-view>
+
 </template>
 
 <script setup>
 // import LoginScreen from './views/LoginScreen.vue'
-import HomeScreen from './views/HomeScreen.vue'
+// import HomeScreen from './views/HomeScreen.vue'
 
 </script>
