@@ -1,18 +1,13 @@
 <template>
-  <!-- <LoginScreen/> -->
-  <HomeScreen/>
+<!--   <LoginScreen/>-->
+<!--  <home-screen></home-screen>-->
+    <router-view></router-view>
+
 </template>
 
-<script>
+<script setup>
 // import LoginScreen from './views/LoginScreen.vue'
-import HomeScreen from './views/HomeScreen.vue'
+// import HomeScreen from './views/HomeScreen.vue'
 
-
-export default {
-  name: 'App',
-  components: {
-    // LoginScreen, 
-    HomeScreen
-  }
-}
 </script>
+

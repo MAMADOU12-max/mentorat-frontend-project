@@ -5,9 +5,37 @@ import App from './App.vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'slick-carousel/slick/slick.css';
-import './index.css';
 import "./assets/slick-1.8.1/slick/slick.css";
 // import "./assets/slick-1.8.1/slick/slick.min.js";
 
+import './index.css'
+import {createRouter, createWebHistory} from "vue-router";
+import HomeScreen from "@/views/HomeScreen.vue";
+import LoginScreen from "@/views/LoginScreen.vue";
+// import { swiper, swiperSlide } from 'swiper/vue';
+// import swiperCore, (/* { default global options } */) from "swiper";
 
-createApp(App).mount('#app')
+// import "swiper/swiper.min.css";
+// import "swiper/css/ (/*{ default global options }*/)
+
+// swiperCore.use([/* default global options */])
+
+
+const router = createRouter({
+    history: createWebHistory(),
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: HomeScreen
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: LoginScreen
+
+        }
+    ]
+})
+
+createApp(App).use(router).mount('#app')
