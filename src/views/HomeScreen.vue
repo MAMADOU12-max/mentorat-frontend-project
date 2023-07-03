@@ -44,25 +44,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                <h3 class="mb-4">Nos Mentors</h3>
-                <div>
-                    <div ref="carousel" class="slick-carousel">
-                        <!-- Your carousel items here -->
-                        <div>Item 1</div>
-                        <div>Item 2</div>
-                        <div>Item 3</div>
-                    </div>
-                </div>
-                    </div>
-
-                <div id="app">
-                    <swiper :options="swiperOptions" :slides-per-view="3">
-                    <swiper-slide>Slide 1</swiper-slide>
-                    <swiper-slide>Slide 2</swiper-slide>
-                    <swiper-slide>Slide 3</swiper-slide>
+                  <h3 class="mb-4">Nos Mentors</h3>
+                  <div>
+                    <swiper class="bg-warning pb-4"
+                            :slides-per-view="4"
+                            :modules="configSwiper"
+                            :space-between="20"
+                            :loop="true"
+                            :pagination="{clickable: true}"
+                            :autoplay="{
+                              delay: 7000,
+                              disableOnInteraction: false,
+                              pauseOnMouseEnter: true
+                      }"
+                    >
+                      <swiper-slide class="container bg-success" v-for="slide in mesSlide" :key="slide.description">
+                        <div class="row bg-bleu">
+                          <h1>{{slide.nom}}</h1>
+                          <p>{{slide.description}}</p>
+                        </div>
+                      </swiper-slide>
                     </swiper>
+                  </div>
                 </div>
-
              
             </div>
         </div>
@@ -135,74 +139,33 @@
     </div>
 </template>
 
-<script>
+<script setup>
 
 import Appbar from '../components/AppBar.vue'
 import AppFooter from '../components/AppFooter.vue'
-// import $ from 'jquery';
-// import 'slick-carousel';
 
-// $('.your-class').slick({
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     asNavFor: '.slider-for',
-//     dots: true,
-//     centerMode: true,
-//     focusOnSelect: true
-// });
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import {Autoplay, Pagination} from 'swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
-export default {
-    name: 'App',    
-    components: {
-        Appbar, 
-        AppFooter
-    },
-    // mounted() {
-    //     // Initialize the Slick.js carousel when the component is mounted
-    //     this.$nextTick(() => {
-    //         $(this.$refs.carousel).slick();
-    //     });
-    // },
+const configSwiper = [Autoplay,Pagination]
 
-   
-}
-
+let mesSlide =  [
+  {nom: "item 1", description: "Acceuil"},
+  {nom: "item 2", description: "Nos Mentors"},
+  {nom: "item 3", description: "FAQ"},
+  {nom: "item 4", description: "Acceuil"},
+  {nom: "item 5", description: "Nos Mentors"},
+  {nom: "item 6", description: "FAQ"},
+  {nom: "item 7", description: "Acceuil"},
+  {nom: "item 8", description: "Nos Mentors"},
+  {nom: "item 9", description: "FAQ"},
+]
 
 </script>
 
-<!-- <script> 
-export default {
-  name: 'App',
-  data() {
-    return {
-      swiperOptions: {
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        autoplay: {
-          delay: 5000,
-        },
-      },
-    }
-  },
-}
-</script> -->
-
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <style scoped>
-
-
-/* @import "@/assets/slick-1.8.1/slick/slick.css"; */
-
-/* Add any custom styles for your carousel here */
-/* .slick-carousel {
-    width: 100%;
-} */
 
 #landing{
     padding: 100px 0 100px 0;
