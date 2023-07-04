@@ -1,6 +1,6 @@
 <template>
     <main>
-        <nav class="mb-4 navbar navbar-expand-md navbar-expand-lg" aria-label="Barre de navigation hors toile grande" _mstaria-label="449202" _msthash="32">
+        <nav class=" navbar navbar-expand-md navbar-expand-lg" aria-label="Barre de navigation hors toile grande" _mstaria-label="449202" _msthash="32">
             <div class="container">
                 <a class="navbar-brand" href="#" _msttexthash="1158677" _msthash="33">
                     <img class="img-fluid" width="50" height="50" v-bind:src="require('@/assets/images/mentor-hub.png')" alt="logo mentor-hub">

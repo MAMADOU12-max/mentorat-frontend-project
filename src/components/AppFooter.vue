@@ -1,5 +1,5 @@
 <template>
-    <div class="container bg-rose">
+    <div class="container-fluid bg-rose">
         <footer class="row row-cols-1  row-cols-sm-2 row-cols-md-3 row-cols-lg-6 py-5 border-top">
             <div class="d-flex flex-column justify-content-between col mb-3">
                 <div class="d-flex">

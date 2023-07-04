@@ -40,10 +40,90 @@
         
         <!-- end Boostez votre carriere section -->
 
-        <!-- start Nos mentors section [Mamadou-->
+        <!-- start Nos mentors section [Mamadou]-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                  <h3 class="mb-4">Nos Mentors</h3>
+                  <div>
+                    <swiper class="bg-warning pb-4"
+                            :slides-per-view="4"
+                            :modules="configSwiper"
+                            :space-between="20"
+                            :loop="true"
+                            :pagination="{clickable: true}"
+                            :autoplay="{
+                              delay: 7000,
+                              disableOnInteraction: false,
+                              pauseOnMouseEnter: true
+                      }"
+                    >
+                      <swiper-slide class="container bg-success" v-for="slide in mesSlide" :key="slide.description">
+                        <div class="row bg-bleu">
+                          <h1>{{slide.nom}}</h1>
+                          <p>{{slide.description}}</p>
+                        </div>
+                      </swiper-slide>
+                    </swiper>
+                  </div>
+                </div>
+             
+            </div>
+        </div>
         <!-- end Nos mentors section -->
 
-        <!-- start Pourquoi un mentor section [Mamadou-->
+        <!-- start Pourquoi un mentor section [Mamadou] -->
+        <div class="container py-5">
+            <h4 class="">Pourquoi un mentor !</h4>
+            <div class="row my-3">
+                <div class="col-md-6">
+                    <div class="d-flex flex-row">
+                        <div class="">
+                            <img class="h-25" v-bind:src="require('@/assets/images/exchange-idea.png')">
+                        </div>
+                        <div class="p-2">
+                            <h5>Pour rester motiver</h5>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum iste mollitia id fugiat quia sint dicta doloremque magni quis!</p>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-md-6">
+                    <div class="d-flex flex-row">
+                        <div class="">
+                            <img class="h-25" v-bind:src="require('@/assets/images/exchange-idea.png')">
+                        </div>
+                        <div class="p-2">
+                            <h5>Pour se depasser !</h5>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum iste mollitia id fugiat quia sint dicta doloremque magni quis!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-md-6">
+                    <div class="d-flex flex-row">
+                        <div class="">
+                            <img class="h-25" v-bind:src="require('@/assets/images/exchange-idea.png')">
+                        </div>
+                        <div class="p-2">
+                            <h5>Pour prendre des decisions plus eclairees !</h5>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum iste mollitia id fugiat quia sint dicta doloremque magni quis!</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-6">
+                    <div class="d-flex flex-row">
+                        <div class="">
+                            <img class="h-25" v-bind:src="require('@/assets/images/exchange-idea.png')">
+                        </div>
+                        <div class="p-2">
+                            <h5>Pour elargir son reseau professionnel !</h5>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum iste mollitia id fugiat quia sint dicta doloremque magni quis!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- end Pourquoi un mentor section -->
 
         <!-- start FAQ section [Arnold]-->
@@ -59,10 +139,29 @@
     </div>
 </template>
 
-
 <script setup>
+
 import Appbar from '../components/AppBar.vue'
 import AppFooter from '../components/AppFooter.vue'
+
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import {Autoplay, Pagination} from 'swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
+
+const configSwiper = [Autoplay,Pagination]
+
+let mesSlide =  [
+  {nom: "item 1", description: "Acceuil"},
+  {nom: "item 2", description: "Nos Mentors"},
+  {nom: "item 3", description: "FAQ"},
+  {nom: "item 4", description: "Acceuil"},
+  {nom: "item 5", description: "Nos Mentors"},
+  {nom: "item 6", description: "FAQ"},
+  {nom: "item 7", description: "Acceuil"},
+  {nom: "item 8", description: "Nos Mentors"},
+  {nom: "item 9", description: "FAQ"},
+]
 
 </script>
 
@@ -86,5 +185,7 @@ import AppFooter from '../components/AppFooter.vue'
 }
 
 </style>
+
+
 
 
