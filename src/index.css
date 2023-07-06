@@ -10,6 +10,12 @@ a {
 
 .bg-rose{
     background-color: #a146a6;
+    color:white ;
+}
+
+.bg-bleu{
+    background-color: #5c67b6;
+    color:white ;
 }
 
 .text-rose{

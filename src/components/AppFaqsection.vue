@@ -1,5 +1,5 @@
 <template>
-    <div class="position-relative container bg-primary vh-100 p-5 ">
+    <div class="main position-relative container vh-100 p-5 ">
         <!-- <div class="position-absolute top-0 start-0 bg-dark h-25 w-25">BB</div> -->
         <h2>F.A.Q</h2>
         <p class="">Les questions les plus fréquente sur le fonctionnement du service Mentor-Moi</p>
@@ -86,8 +86,13 @@
 </template>
 
 
-<script>
-export default {
-    name: "AppFaqsection"
-}
+<script setup>
+
 </script>
+
+<style scoped>
+
+.main {
+    background-color: red;
+}
+</style>
