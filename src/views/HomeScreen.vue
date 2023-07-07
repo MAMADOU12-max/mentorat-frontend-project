@@ -131,8 +131,7 @@
         <!-- end FAQ section -->
 
         <!-- start Temoignages section [Arnold]-->
-        <!-- <AppTemoignage></AppTemoignage> -->
-        <AppTest></AppTest>
+        <AppTemoignage></AppTemoignage>
         <!-- end Temoignages section -->
 
         <!-- start footer section [Javis]-->
@@ -147,8 +146,7 @@
 import Appbar from '../components/AppBar.vue'
 import AppFooter from '../components/AppFooter.vue'
 import AppFaqsection from '../components/AppFaqsection.vue'
-// import AppTemoignage from '../components/AppTemoignage.vue'
-import AppTest from '@/components/AppTest.vue'
+import AppTemoignage from '../components/AppTemoignage.vue'
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import {Autoplay, Pagination} from 'swiper'
