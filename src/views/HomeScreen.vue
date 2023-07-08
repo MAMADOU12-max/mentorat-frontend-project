@@ -127,9 +127,11 @@
         <!-- end Pourquoi un mentor section -->
 
         <!-- start FAQ section [Arnold]-->
+        <AppFaqsection></AppFaqsection>
         <!-- end FAQ section -->
 
         <!-- start Temoignages section [Arnold]-->
+        <AppTemoignage></AppTemoignage>
         <!-- end Temoignages section -->
 
         <!-- start footer section [Javis]-->
@@ -143,6 +145,8 @@
 
 import Appbar from '../components/AppBar.vue'
 import AppFooter from '../components/AppFooter.vue'
+import AppFaqsection from '../components/AppFaqsection.vue'
+import AppTemoignage from '../components/AppTemoignage.vue'
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import {Autoplay, Pagination} from 'swiper'
@@ -185,7 +189,6 @@ let mesSlide =  [
 }
 
 </style>
-
 
 
 
