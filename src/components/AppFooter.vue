@@ -63,12 +63,12 @@
                 </ul>
             </div>
         </footer>
-        <div class="row d-flex divider-custom">
-            <div class="col divider-custom-line"></div>
-            <div class="col d-flex justify-content-between">
+        <div class="row d-flex align-items-center">
+            <div class="col col-sm col-md bg-white border-white divider-custom-line"></div>
+            <div class="col-4 col-sm-3  col-md-3 d-flex justify-content-between">
                 <img class="img-fluid" width="40"  v-for="image in images" :key="image.id" v-bind:src="require(`../assets/icons/${image.name}`)" v-bind:alt="image.alt" />
             </div>
-            <div class="col divider-custom-line"></div>
+            <div class="col col-sm col-md bg-white border-white divider-custom-line"></div>
         </div>
     </div>
 </template>
@@ -86,17 +86,8 @@ let images = [
 
 <style scoped>
 
-.divider-custom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.divider-custom .divider-custom-line {
-    width: 100%;
+.divider-custom-line {
     height: 0.25rem;
-    background-color: #ffffff;
-    border-color: #ffffff;
 }
 
 </style>
