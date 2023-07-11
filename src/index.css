@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bg-rose{
+    background-color: #a146a6;
+    color:white ;
+}
+
+.bg-bleu{
+    background-color: #5c67b6;
+    color:white ;
+}
+
+.text-rose{
+    color: #a146a6;
+}
+
+.trait{
+    width: 60px;
+    height: 8px;
+    border-radius: 5px;
+    margin: 12px 0;
+}
+.titleStyle{
+    color: #a146a6;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
