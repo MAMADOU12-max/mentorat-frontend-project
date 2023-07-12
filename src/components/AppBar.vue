@@ -20,7 +20,7 @@
                                     <a class="nav-link fw-bold">{{ menu.name }}</a>
                                 </router-link>
                             </li>
-                            <li class="nav-item dropdown">
+                            <!-- <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" _msttexthash="313989" _msthash="39"> Liste déroulante </a>
                                 <ul class="dropdown-menu" _msthidden="3">
                                     <li _msthidden="1"><a class="dropdown-item" href="#" _msttexthash="76466" _msthidden="1" _msthash="40">Action</a></li>
@@ -30,7 +30,7 @@
                                     </li>
                                     <li _msthidden="1"><a class="dropdown-item" href="#" _msttexthash="349791" _msthidden="1" _msthash="42">Something else here</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                         </ul>
                         <div>
                             <router-link to="/login">
@@ -52,14 +52,6 @@
 let menus =  [
     {namRouter: "home", name: "Acceuil"},
     {namRouter: "", name: "Nos Mentors"},
-    {namRouter: "login", name: "FAQ"},
+    {namRouter: "login", name: "FAQ"}
 ]
 </script>
-
-<style scoped>
-
-.btn{
-    border-radius: 20px;
-}
-
-</style>
