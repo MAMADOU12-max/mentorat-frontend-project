@@ -1,5 +1,5 @@
 <template>
-    <div class="main position-relative container vh-100 py-3 mb-5 ">
+    <div class="main position-relative container py-3 mb-5 ">
         <!-- <div class="position-absolute top-0 start-0 bg-dark h-25 w-25">BB</div> -->
         <div class="trait bg-rose"></div>
         <h3 class="text-rose fw-bold">F.A.Q</h3>

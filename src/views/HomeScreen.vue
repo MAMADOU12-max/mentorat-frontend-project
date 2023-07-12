@@ -8,10 +8,10 @@
         <!-- end navbar section -->
 
         <!-- section1: navbar, footer booster votre carriere  [Javis]-->
-        <div class="container" id="landing">
+        <div class="container py-5" id="landing">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1">
+                <div class="row ">
+                    <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-0 order-2 order-lg-1">
                         <div class="txt-landing">
                             <h1 class="mb-4">Booster votre carriere <br> avec <span style="color: #a146a6">un Mentor.</span></h1>
                             <h4 class="mb-4">
@@ -41,7 +41,7 @@
         <!-- end Boostez votre carriere section -->
 
         <!-- start Nos mentors section [Mamadou]-->
-        <div class="container">
+        <div class="container mt-4">
             <div class="row">
                 <div class="col-md-12">
                     <div class="trait bg-rose"></div>
