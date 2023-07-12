@@ -1,8 +1,8 @@
 <template>
-    <div class="container vh-100 py-3">
+    <div class="container vh-100 py-2">
         <!-- <div class="position-absolute top-0 start-0 bg-dark h-25 w-25">BB</div> -->
         <div class="trait bg-rose"></div>
-        <h2 class="Temoignage fw-bold">Témoignages</h2>
+        <h3 class="text-rose fw-bold">Témoignages</h3>
 
         <swiper class="pb-4" :slides-per-view="3" :modules="configSwiper" :space-between="20" :loop="true"
             :pagination="{ clickable: true }" :autoplay="{

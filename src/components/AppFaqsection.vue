@@ -2,8 +2,8 @@
     <div class="main position-relative container vh-100 py-3 mb-5 ">
         <!-- <div class="position-absolute top-0 start-0 bg-dark h-25 w-25">BB</div> -->
         <div class="trait bg-rose"></div>
-        <h2 class="Faq fw-bold">F.A.Q</h2>
-        <p class="FaqTitle text-center my-4">Les questions les plus fréquente sur le fonctionnement du service Mentor-Moi</p>
+        <h3 class="text-rose fw-bold">F.A.Q</h3>
+        <p class="titleStyle text-center my-4">Les questions les plus fréquente sur le fonctionnement du service Mentor-Moi</p>
        
         <div class="FaqQuestions">
 
@@ -103,23 +103,3 @@
 
 </script>
 
-<style scoped>
-
-/* .main {
-    background-color: red;
-} */
-.trait{
-    width: 60px;
-    height: 10px;
-    border-radius: 5px;
-    margin: 12px 0;
-}
-.Faq{
-    color: #5C67B6;
-}
-.FaqTitle{
-    color: #5C67B6;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-</style>

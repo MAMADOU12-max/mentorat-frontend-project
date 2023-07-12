@@ -44,9 +44,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                  <h3 class="mb-4">Nos Mentors</h3>
+                    <div class="trait bg-rose"></div>
+                    <h3 class="text-rose fw-bold mb-4">Nos Mentors</h3>
+                  
                   <div>
-                    <swiper class="bg-warning pb-4"
+                    <swiper class="pb-4"
                             :slides-per-view="4"
                             :modules="configSwiper"
                             :space-between="20"
@@ -58,10 +60,32 @@
                               pauseOnMouseEnter: true
                       }"
                     >
-                      <swiper-slide class="container bg-success" v-for="slide in mesSlide" :key="slide.description">
-                        <div class="row bg-bleu">
-                          <h1>{{slide.nom}}</h1>
-                          <p>{{slide.description}}</p>
+                      <swiper-slide class="container mb-4" v-for="slide in mesSlide" :key="slide.description">
+                        <div class="row">
+                          <!-- <h1>{{slide.nom}}df</h1>
+                          <p>{{slide.description}}</p> -->
+                           <div class="card p-0 rounded-4" >
+                                <img class="card-img-top rounded-4" src="https://images.unsplash.com/photo-1688999558024-0bbeac1c0102?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" alt="Card image"
+                                 style="width:100%; height: 200px" >
+                                <div class="card-body">
+                                <h5 class="card-title fw-bold" style="color: #a146a6">{{slide.nom}}</h5>
+                                <p class="card-text mb-0">{{slide.description}}</p>
+
+                                <div class="star-container">
+                                    <i class="star">&#9733;</i>
+                                    <i class="star">&#9733;</i>
+                                    <i class="star">&#9733;</i>
+                                    <i class="star">&#9733;</i>
+                                    <i class="star">&#9733;</i>
+                                    <div class="fw-bold pt-1" style="font-size: 13px"> &nbsp;(150)</div>
+                                </div>
+
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <button type="button" class="btn btn-outline-primary px-4">
+                                            <strong style="font-size: 14px">View Profil</strong></button>
+                                    </div> 
+                                </div>
+                            </div>
                         </div>
                       </swiper-slide>
                     </swiper>
@@ -74,7 +98,8 @@
 
         <!-- start Pourquoi un mentor section [Mamadou] -->
         <div class="container py-5">
-            <h4 class="">Pourquoi un mentor !</h4>
+            <div class="trait bg-rose"></div>
+            <h3 class="text-rose fw-bold">Pourquoi un mentor !</h3>
             <div class="row my-3">
                 <div class="col-md-6">
                     <div class="d-flex flex-row">
@@ -156,15 +181,15 @@ import 'swiper/css/pagination'
 const configSwiper = [Autoplay,Pagination]
 
 let mesSlide =  [
-  {nom: "item 1", description: "Acceuil"},
-  {nom: "item 2", description: "Nos Mentors"},
-  {nom: "item 3", description: "FAQ"},
-  {nom: "item 4", description: "Acceuil"},
-  {nom: "item 5", description: "Nos Mentors"},
-  {nom: "item 6", description: "FAQ"},
-  {nom: "item 7", description: "Acceuil"},
-  {nom: "item 8", description: "Nos Mentors"},
-  {nom: "item 9", description: "FAQ"},
+  {nom: "Pr Romuald", description: " Some example text some example text."},
+  {nom: "Javis", description: " Some example text some example text."},
+  {nom: "Diouf Modou", description: " Some example text some example text."},
+  {nom: "Dr Schaun", description: " Some example text some example text."},
+  {nom: "Arnold", description: " Some example text some example text."},
+  {nom: "Cheikh", description: " Some example text some example text."},
+//   {nom: "item 7", description: "Acceuil"},
+//   {nom: "item 8", description: "Nos Mentors"},
+//   {nom: "item 9", description: "FAQ"},
 ]
 
 </script>
@@ -175,7 +200,14 @@ let mesSlide =  [
     padding: 100px 0 100px 0;
 }
 
-.border-goutte{
+.star-container {
+display: flex;
+align-items: left;
+}
+.star {
+color: gold;
+font-size: 1rem;
+margin: 0 2px;
 }
 
 .btn{
